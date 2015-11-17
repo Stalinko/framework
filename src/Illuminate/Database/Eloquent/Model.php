@@ -30,6 +30,23 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 
+/**
+ * Class Model
+ * @package Illuminate\Database\Eloquent
+ *
+ * Methods statically passed into the query builder:
+ * @method static static findOrFail($id, $columns = ['*'])
+ * @method static static find($id, $columns = ['*'])
+ * @method static static findMany($ids, $columns = ['*'])
+ * @method static static where($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static static orWhere($column, $operator = null, $value = null)
+ * @method static static has($relation, $operator = '>=', $count = 1, $boolean = 'and', \Closure $callback = null)
+ * @method static static hasNested($relations, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
+ * @method static static doesntHave($relation, $boolean = 'and', \Closure $callback = null)
+ * @method static static whereHas($relation, \Closure $callback, $operator = '>=', $count = 1)
+ * @method static static whereDoesntHave($relation, \Closure $callback = null)
+ * @method static static orHas($relation, $operator = '>=', $count = 1)
+ */
 abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializable, QueueableEntity, UrlRoutable
 {
     /**
